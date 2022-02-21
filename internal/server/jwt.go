@@ -65,7 +65,7 @@ func verifyJWT(tokenStr string) (int, error) {
 	}
 
 	if notExpired := claims.IsValidAt(time.Now()); !notExpired {
-		return 0, errors.New("Token expired.")
+		return 0, errors.New("token expired")
 	}
 
 	id, err := strconv.Atoi(claims.ID)

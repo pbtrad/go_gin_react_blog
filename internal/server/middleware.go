@@ -45,13 +45,13 @@ func currentUser(ctx *gin.Context) (*store.User, error) {
 	var err error
 	_user, exists := ctx.Get("user")
 	if !exists {
-		err = errors.New("Current context user not set")
+		err = errors.New("current context user not set")
 		log.Error().Err(err).Msg("")
 		return nil, err
 	}
 	user, ok := _user.(*store.User)
 	if !ok {
-		err = errors.New("Context user is not valid type")
+		err = errors.New("context user is not valid type")
 		log.Error().Err(err).Msg("")
 		return nil, err
 	}
