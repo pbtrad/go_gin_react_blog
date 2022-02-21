@@ -1,8 +1,8 @@
 package server
 
 import (
+	"go_gin_react_blog/internal/store"
 	"net/http"
-	"rgb/internal/store"
 
 	"github.com/gin-gonic/gin"
 )

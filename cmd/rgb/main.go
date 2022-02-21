@@ -1,7 +1,12 @@
 package main
 
-import "internal/server"
+import (
+	"go_gin_react_blog/internal/cli"
+	"go_gin_react_blog/internal/conf"
+	"go_gin_react_blog/internal/server"
+)
 
 func main() {
-	server.Start()
+	env := cli.Parse()
+	server.Start(conf.NewConfig(env))
 }
